@@ -29,12 +29,18 @@ body::before {
     max-width: 700px;
     height: 94vh; /* Wypełnia całą wysokość przeglądarki */
     margin: 0 auto;
-    background: rgba(255, 255, 255, 0.9); /* Lekko przezroczyste tło */
+    background: rgba(255, 255, 255, 0.3); /* Lekko przezroczyste tło */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     overflow-y: auto; /* Włącz przewijanie, jeśli zawartość wykracza poza wysokość */
 }
+
+
+.central-container::-webkit-scrollbar {
+    display: none;
+}
+
 
 h1, h2 {
     text-align: center;
@@ -127,8 +133,8 @@ textarea {
 }
 
 .info-icon-img {
-    width: 20px;  /* Szerokość obrazka */
-    height: 20px; /* Wysokość obrazka */
+    width: 17px;  /* Szerokość obrazka */
+    height: 17px; /* Wysokość obrazka */
     border-radius: 50%;  /* Okrągły kształt */
 }
 
