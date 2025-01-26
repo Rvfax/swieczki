@@ -1,0 +1,155 @@
+/* Ogólne stylizacje */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('bg.jpg'); /* Obraz tła */
+    background-size: cover; /* Dopasowanie obrazu do rozmiaru */
+    background-attachment: fixed; /* Tło pozostaje nieruchome */
+    background-position: center;
+    height: 100vh; /* Pełna wysokość widoku */
+    overflow: hidden; /* Ukryj przewijanie na body */
+    position: relative; /* Dodanie pozycji względnej do tła */
+}
+
+/* Dodanie przyciemnionego filtra */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Przezroczysta czarna nakładka (ciemnienie) */
+    z-index: -1; /* Umieszczenie tła poniżej zawartości */
+}
+
+
+.central-container {
+    width: 90%;
+    max-width: 700px;
+    height: 94vh; /* Wypełnia całą wysokość przeglądarki */
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9); /* Lekko przezroczyste tło */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow-y: auto; /* Włącz przewijanie, jeśli zawartość wykracza poza wysokość */
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Ogólny wygląd kafelków */
+.option {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #f0f0f0;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold; /* Wyróżnienie tekstu */
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/* Efekt hover */
+.option:hover {
+    transform: scale(1.1);
+}
+
+/* Wybrany kafelek */
+.option.selected {
+    border: 3px solid #4CAF50; /* Zielone podświetlenie */
+    background: rgba(76, 175, 80, 0.2); /* Jasnozielone tło */
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.5); /* Zielony cień */
+}
+
+
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+textarea {
+    width: 100%; /* Rozciągnięcie na całą szerokość kontenera */
+    box-sizing: border-box; /* Uwzględnij padding w szerokości */
+    padding: 10px; /* Dystans między tekstem a krawędziami */
+    border: 2px solid #ccc; /* Delikatna ramka */
+    border-radius: 5px; /* Zaokrąglone rogi */
+    font-size: 16px; /* Większy rozmiar tekstu */
+    resize: none; /* Wyłączenie możliwości zmiany rozmiaru przez użytkownika */
+}
+
+.dane {
+    width: 22%;
+    border-radius: 5px;
+}
+
+.dodatki {
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+}
+
+
+.info-icon {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+    position: relative;
+}
+
+.info-icon-img {
+    width: 20px;  /* Szerokość obrazka */
+    height: 20px; /* Wysokość obrazka */
+    border-radius: 50%;  /* Okrągły kształt */
+}
+
+.info-icon::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 35px; /* Dymek pojawi się poniżej */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    font-size: 12px;
+}
+
+.info-icon:hover::after {
+    opacity: 1;
+    visibility: visible;
+}

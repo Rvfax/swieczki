@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalizacja świeczek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="central-container">
+        
+        <h1>Witaj w naszym świecie świec!</h1>
+
+        <p>Każda świeczka, którą oferujemy, jest tworzona z pasją i starannością ręcznie, każdy detal ma znaczenie. Dzięki temu możesz mieć pewność, że otrzymujesz produkt wyjątkowy, wykonany z najwyższą dbałością o jakość i estetykę.
+
+            Wszystkie nasze świeczki powstają z najlepszych składników, takich jak woski sojowe, które są naturalne i ekologiczne. Każda z nich jest unikalna, dzięki możliwości wyboru zapachów, kolorów i dodatków. Tworzymy je z myślą o tym, aby dodały wyjątkowego klimatu w Twoim domu, czy to podczas relaksu, czy wyjątkowych chwil z bliskimi.</p>
+
+        
+            - Naczynie: Szklanka 300ml <br>
+            - Czas palenia: 50 - 75 godzin <br>
+            - Koszt takiej świeczki to zaledwie 30zł (+ wysyłka) <br>
+        
+
+            
+        <form action="https://ratufa.io/form/send" method="POST">
+            <h1>Stwórz swoją świeczkę</h1>
+            <!-- Sekcja wyboru zapachu -->
+            <h2>Wybierz zapach:</h2>
+            <div class="options" id="zapach-options">
+                <div class="option" data-value="wanilia">Wanilia</div>
+                <div class="option" data-value="czekolada">Czekolada</div>
+                <div class="option" data-value="róża">Róża</div>
+                <div class="option" data-value="jasmin">Jaśmin</div>
+                <div class="option" data-value="jablko">Zielone Jabłószko</div>
+                <div class="option" data-value="mandarynka">Mandarynka</div>
+                <div class="option" data-value="piernik">Piernik</div>
+                <div class="option" data-value="cynamon">Cynamon</div>
+                <div class="option" data-value="swiateczny">Świąteczny</div>
+            </div>
+            <input type="hidden" name="zapach" id="zapach" required>
+
+            <!-- Sekcja wyboru koloru -->
+            <h2>Wybierz kolor:</h2>
+            <div class="options" id="kolor-options">
+                <div class="option" data-value="biały">Biały</div>
+                <div class="option" data-value="czerwony" style="color: rgb(248, 66, 0);">Czerwony</div>
+                <div class="option" data-value="zielony" style="color: rgb(116, 248, 0);">Zielony</div>
+                <div class="option" data-value="niebieski" style="color: rgb(0, 170, 248);">Niebieski</div>
+                <div class="option" data-value="zolty" style="color: rgb(248, 211, 0);">Żółty</div>
+            </div>
+            
+            <input type="hidden" name="kolor" id="kolor" required>
+
+            <h2>Dodatki:</h2>
+            Drewniana przykrywka: (+5zł)
+                <select name="przykrywka" id="przykrywka" class="dodatki" required>
+                    <option value="-" disabled selected></option>
+                    <option value="tak">Tak</option>
+                    <option value="nie">Nie</option>
+                </select>
+
+
+            <!-- Uwagi -->
+            <h2>Dodatkowe uwagi:</h2>
+            <textarea id="uwagi" name="uwagi" rows="4" placeholder="Napisz coś, co powinniśmy wiedzieć"></textarea>
+
+            <!-- Dane -->
+            <h2>Twoje dane</h2>
+            Imię: <br>
+            <input type="text" name="imie" class="dane" id="imię-options" placeholder="Imię"  required> <br>
+            Nazwisko: <br>
+            <input type="text" name="nazwisko" class="dane" id="nazw-options" placeholder="Nazwisko" required> <br>
+            E-mail: <br>
+            <input type="email" name="email" class="dane" id="email-options" placeholder="e-mail" required> <br>
+            Telefon: <br>
+            <input type="tel" name="telefon" class="dane" id="tel-options" placeholder="telefon" required>
+
+            <!-- Dane wysyłki -->
+
+            <h2>Wysyłka</h2>
+            Miasto: <br>
+            <input type="text" name="miasto" class="dane" id="miasto-options" placeholder="miasto" required> <br>
+            Ulica: <br>
+            <input type="text" name="ulica" class="dane" id="ulica-options" placeholder="ulica" required> <br>
+            Numer domu: <br>
+            <input type="text" name="nr" class="dane" id="dom-options" placeholder="nr domu" required> <br>
+            Kod paczkomatu: <br>
+            <input type="text" name="paczkomat" class="dane" id="paczkomat-options" placeholder="kod paczkomatu" required> 
+            <span class="info-icon" data-tooltip="Kod paczkomatu np. WAW309M">
+                <img src="qm.png" alt="info" class="info-icon-img">
+            </span>
+
+        
+
+            <br><br><button type="submit">Wyślij zamówienie</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+    <script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?f=h57953ek&n=n1.ratufa.io"></script>
+    <!-- Klient --> <script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?f=igdmp174&n=n1.ratufa.io"></script>
+</body>
+</html>
