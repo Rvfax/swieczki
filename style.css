@@ -46,6 +46,47 @@ h1, h2 {
     text-align: center;
 }
 
+a {
+    text-decoration: none; /* Wyłącza podkreślenie */
+    color: inherit; /* Ustawia kolor dziedziczony z elementu nadrzędnego */
+}
+
+.kafelek {
+    width: 250px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #f0f0f0;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold; /* Wyróżnienie tekstu */
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.kafelek:hover {
+    transform: scale(1.1);
+}
+
+.back {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #ff4b4b;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold; /* Wyróżnienie tekstu */
+    font-size: 20px;
+    transition: 0.3s;
+}
+
 .options {
     display: flex;
     flex-wrap: wrap;
